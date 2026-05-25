@@ -47,6 +47,8 @@ jobs:
       # -------------------------
       - name: Install GMP and OpenCV
         run: |
+        
+          set VCPKG_BUILD_TYPE=release
           C:\vcpkg\vcpkg.exe install gmp:x64-windows-release opencv:x64-windows-release
           C:\vcpkg\vcpkg.exe integrate install
 
