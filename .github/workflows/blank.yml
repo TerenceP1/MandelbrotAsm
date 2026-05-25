@@ -34,7 +34,14 @@ jobs:
       - name: Bootstrap vcpkg
         run: |
           C:\vcpkg\bootstrap-vcpkg.bat
-
+      - name: Cache vcpkg
+        uses: actions/cache@v4
+        with:
+          path: |
+            C:\vcpkg\installed
+            C:\vcpkg\buildtrees
+            C:\vcpkg\packages
+          key: vcpkg-${{ runner.os }}-opencv-gmp
       # -------------------------
       # Install dependencies
       # -------------------------
