@@ -33,7 +33,7 @@ jobs:
 
       - name: Bootstrap vcpkg
         run: |
-          C:\vcpkg\bootstrap-vcpkg.bat
+          ${{ github.workspace }}\vcpkg\bootstrap-vcpkg.bat
       - name: Cache vcpkg
         uses: actions/cache@v4
         with:
