@@ -17,4 +17,4 @@ Mode 1 is the animation generator. The resolution is hardcoded to 4k (I will cha
 
 ## How to build
 
-Simple, just double click build.bat (assuming you have the above installed [these](#requirements)). If any issues arise, you will have to fix the requirement/dependency issue yourself. Ensure gfortran and CMake are on your path upon running.
+Simple, just double click build.bat (assuming you have the above installed [these](#requirements)). If any issues arise, you will have to fix the requirement/dependency issue yourself. Ensure gfortran and CMake are on your path upon running. (BEWARE IT WILL WIPE YOUR VCPKG OPENCV IF YOU HAVE IT)
