@@ -8,5 +8,5 @@ vcpkg remove opencv1:x64-windows
 vcpkg remove opencv2:x64-windows
 vcpkg remove opencv3:x64-windows
 vcpkg remove opencv4:x64-windows
-cmake . -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake  -DVCPKG_TARGET_TRIPLET=x64-windows
+cmake . -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake  -DVCPKG_TARGET_TRIPLET=x64-windows
 cmake --build . --config Release
