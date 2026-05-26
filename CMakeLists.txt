@@ -7,8 +7,10 @@ add_executable(MandelbrotAsm
 )
 target_compile_options(MandelbrotAsm PRIVATE $<$<CONFIG:Release>:/O2>)
 target_compile_features(MandelbrotAsm PRIVATE cxx_std_17)
-find_package(OpenCV CONFIG REQUIRED)
-target_link_libraries(MandelbrotAsm PRIVATE ${OpenCV_LIBS})
+
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/opencv/opencv/build)
+find_package(OpenCV REQUIRED)
+target_link_libraries(MandelbrotAsm PRIVATE ${OpenCV_LIBS} "${CMAKE_CURRENT_LIST_DIR}/opencv/opencv/build/x64/vc16/lib")
 
 target_include_directories(MandelbrotAsm PRIVATE ${OpenCV_INCLUDE_DIRS})
 find_path(GMP_INCLUDE_DIR gmp.h)
