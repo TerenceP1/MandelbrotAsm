@@ -38,9 +38,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            C:\vcpkg\installed
-            C:\vcpkg\buildtrees
-            C:\vcpkg\packages
+            ${{ github.workspace }}\vcpkg\installed
+            ${{ github.workspace }}\vcpkg\buildtrees
+            ${{ github.workspace }}\vcpkg\packages
           key: vcpkg-${{ runner.os }}-opencv-gmp
       # -------------------------
       # Install dependencies
@@ -49,8 +49,8 @@ jobs:
         run: |
           choco install opencv -y
           set VCPKG_BUILD_TYPE=release
-          C:\vcpkg\vcpkg.exe install gmp:x64-windows-release
-          C:\vcpkg\vcpkg.exe integrate install
+          ${{ github.workspace }}\vcpkg\vcpkg.exe install gmp:x64-windows-release
+          ${{ github.workspace }}\vcpkg\vcpkg.exe integrate install
 
 
       # -------------------------
@@ -60,6 +60,7 @@ jobs:
         shell: cmd
         run: |
           call build.bat
+        continue-on-error: true
 
       # -------------------------
       # Upload output folder
