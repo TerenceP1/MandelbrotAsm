@@ -46,8 +46,9 @@ jobs:
       # Install dependencies
       # -------------------------
       - name: Install GMP and OpenCV
+        shell: cmd
         run: |
-          choco install opencv -y
+          rem choco install opencv -y
           set VCPKG_BUILD_TYPE=release
           ${{ github.workspace }}\vcpkg\vcpkg.exe install gmp:x64-windows-release
           ${{ github.workspace }}\vcpkg\vcpkg.exe integrate install
