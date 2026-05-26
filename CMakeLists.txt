@@ -14,7 +14,9 @@ target_link_libraries(MandelbrotAsm PRIVATE ${OpenCV_LIBS})
 target_include_directories(MandelbrotAsm PRIVATE ${OpenCV_INCLUDE_DIRS})
 find_path(GMP_INCLUDE_DIR gmp.h)
 find_library(GMP_LIBRARY gmp)
-
+message(STATUS "OpenCV_VERSION: ${OpenCV_VERSION}")
+message(STATUS "OpenCV_DIR: ${OpenCV_DIR}")
+message(STATUS "OpenCV_LIBS: ${OpenCV_LIBS}")
 target_include_directories(MandelbrotAsm PRIVATE ${GMP_INCLUDE_DIR})
 target_link_libraries(MandelbrotAsm PRIVATE ${GMP_LIBRARY})
 
