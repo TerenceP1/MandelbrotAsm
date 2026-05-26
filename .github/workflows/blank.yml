@@ -57,6 +57,7 @@ jobs:
       # Run your build script
       # -------------------------
       - name: Run build.bat
+        shell: cmd
         run: |
           call build.bat
 
