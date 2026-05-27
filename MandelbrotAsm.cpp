@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <thread>
-#pragma comment(lib,"opencv_world4120.lib")
+//#pragma comment(lib,"opencv_world4120.lib")
 #include <opencv2/opencv.hpp>
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
