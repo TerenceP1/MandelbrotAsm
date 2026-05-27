@@ -16,5 +16,6 @@ cmake . -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake  -DVCPK
 cmake --build . --config Release
 xcopy neon-p.dat output /Y /I
 xcopy palette.txt output /Y /I
-xcopy opencv\opencv\build\x64\vc16\bin output /E /I /H /Y
-Compress-Archive -Path "output" -DestinationPath "out.zip"
+::xcopy opencv\opencv\build\x64\vc16\bin output /E /I /H /Y
+xcopy opencv\opencv\build\x64\vc16\bin\*.dll output /S /I /Y
+powershell -NoProfile -Command "Compress-Archive -Path 'output' -DestinationPath 'out.zip'"
