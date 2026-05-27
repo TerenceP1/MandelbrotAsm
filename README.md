@@ -5,7 +5,7 @@ Its a public release of my MandelbrotAsm hobby project. It currently only works 
 
 ## Requirements
 
-CMake, MSVC, gfortran (use MSYS2 for gfortran), OpenCV and GMP (best installed by vcpkg, otherwise CMake might complain)
+CMake, MSVC, gfortran (use MSYS2 for gfortran), GMP (best installed by vcpkg, otherwise CMake might complain)
 If you run into cmake complaining, this is a sneak peak so you must go fix it :(
 
 ## How to use
