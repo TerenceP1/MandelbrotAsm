@@ -19,10 +19,10 @@ lowbyte_mask_d BYTE 0, 8, 080h, 080h, \
                    080h, 080h, 080h, 080h, \
                    080h, 080h, 080h, 080h
 
-EXTERN printf:PROC
-msg db "Checkpoint 1 reached", 0Ah, 0  ; 0Ah = newline, 0 = null-terminator
-msg2 db "Checkpoint 2 reached", 0Ah, 0  ; 0Ah = newline, 0 = null-terminator
-msg3 db "Checkpoint 3 reached", 0Ah, 0  ; 0Ah = newline, 0 = null-terminator
+; EXTERN printf:PROC
+;msg db "Checkpoint 1 reached", 0Ah, 0  ; 0Ah = newline, 0 = null-terminator
+;msg2 db "Checkpoint 2 reached", 0Ah, 0  ; 0Ah = newline, 0 = null-terminator
+;msg3 db "Checkpoint 3 reached", 0Ah, 0  ; 0Ah = newline, 0 = null-terminator
 .code
 
 PUBLIC AddFloats           ; <-- MUST do this
@@ -46,7 +46,7 @@ mov r9,qword ptr [rsp+56]
 push rbx
 
 ; nonvolitile preservation :( ABI stuff
-sub rsp, 7*16         ; reserve 112 bytes for XMM6–XMM12
+sub rsp, 7*16         ; reserve 112 bytes for XMM6â€“XMM12
 
 vmovaps [rsp + 0*16], xmm6
 vmovaps [rsp + 1*16], xmm7
@@ -289,7 +289,7 @@ mov r9,qword ptr [rsp+56]
 push rbx
 
 ; nonvolitile preservation :( ABI stuff
-sub rsp, 7*16         ; reserve 112 bytes for XMM6–XMM12
+sub rsp, 7*16         ; reserve 112 bytes for XMM6â€“XMM12
 
 vmovaps [rsp + 0*16], xmm6
 vmovaps [rsp + 1*16], xmm7
