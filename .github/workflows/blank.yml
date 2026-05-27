@@ -74,6 +74,7 @@ jobs:
       - name: Create Release + Upload Asset
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: latest
           name: auto-release
           body: "This is an auto-release. I'm not sure if this is trustworthy or not. Just go with the latest."
           files: out.zip
