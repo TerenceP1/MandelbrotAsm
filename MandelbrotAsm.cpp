@@ -431,6 +431,13 @@ int main()
     if (n == 0) n = 8;
     //n = 1;
     threadsT = n;
+        // Create a 500x500 image with 3 channels (BGR)
+    cv::Mat img(500, 500, CV_8UC3, cv::Scalar(255, 0, 0)); // Blue in BGR
+
+    cv::imshow("Pure Blue", img);
+
+    cv::waitKey(0);
+    cv::destroyAllWindows();
     Mat test = makeFrameFloat(0, 0, 1, 1000, 100, n);
     cv::Mat output;
     int targetWidth = 1280;
