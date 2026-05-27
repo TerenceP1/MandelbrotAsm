@@ -14,3 +14,4 @@ cmake . -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake  -DVCPK
 ::echo =============
 ::powershell -Command "(Get-Content 'MandelbrotAsm.vcxproj' -Raw) -replace 'opencv_world4120\.lib','opencv_world4130.lib' | Set-Content 'MandelbrotAsm.vcxproj'"
 cmake --build . --config Release
+xcopy neon-p.dat palette.txt output
